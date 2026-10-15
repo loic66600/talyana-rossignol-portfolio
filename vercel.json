@@ -1,0 +1,7 @@
+{
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": "dist",
+  "functions": { "api/contact.js": { "maxDuration": 20 } }
+}
