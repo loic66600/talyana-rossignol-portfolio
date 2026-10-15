@@ -25,13 +25,15 @@ test('unverified configuration cannot report successful delivery', async () => {
 });
 test('successful request uses a fixed recipient and visitor reply-to', async () => {
   const ip = '192.0.2.1'; const t = await token(ip); let call;
-  const r = await post(ip, { ...base, token: t, to: 'attacker@example.com' }, async (target, options) => {
+  const r = await post(ip, { ...base, company: 'Projet shooting', token: t, to: 'attacker@example.com' }, async (target, options) => {
     call = { target, ...options }; return Response.json({ id: 'mock-email-id' });
   });
   assert.equal(r.status, 200); assert.equal((await r.json()).ok, true);
   const payload = JSON.parse(call.body);
   assert.deepEqual(payload.to, ['rossignoltalyana12@gmail.com']);
   assert.equal(payload.reply_to, base.email);
+  assert.equal(payload.subject, 'Demande de Test technique — Projet shooting');
+  assert.match(payload.text, /Client : Test technique/);
   assert.equal(call.target, 'https://api.resend.com/emails');
   assert.match(call.headers['Idempotency-Key'], /^[a-f0-9]{64}$/);
 });

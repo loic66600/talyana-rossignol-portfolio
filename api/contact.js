@@ -78,7 +78,7 @@ export async function handleContact(request, send = fetch) {
     const response = await send('https://api.resend.com/emails', {
       method: 'POST',
       headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json', 'Idempotency-Key': hash(token + JSON.stringify(fields)) },
-      body: JSON.stringify({ from: SENDER, to: [RECIPIENT], reply_to: email, subject: `Portfolio — ${company || name}`, text: `Nouvelle demande depuis le portfolio de Talyana Rossignol\n\nNom : ${name}\nSociété / Projet : ${company || 'Non précisé'}\nE-mail : ${email}\n\n${message}` }),
+      body: JSON.stringify({ from: SENDER, to: [RECIPIENT], reply_to: email, subject: `Demande de ${name}${company ? ` — ${company}` : ''}`, text: `Nouvelle demande pour Talyana Rossignol\n\nClient : ${name}\nSociété / Projet : ${company || 'Non précisé'}\nE-mail : ${email}\n\n${message}\n\nPour répondre au client, utilisez le bouton Répondre de votre messagerie.` }),
       signal: AbortSignal.timeout(12000)
     });
     const result = await response.json().catch(() => ({}));

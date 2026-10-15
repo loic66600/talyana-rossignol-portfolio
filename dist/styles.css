@@ -114,3 +114,54 @@ dialog{border:0;padding:0}dialog::backdrop{background:#0d0b0bf5;backdrop-filter:
 #contact-mailto[hidden]{display:none}
 #contact-mailto{margin:15px 0;display:inline-block}
 #form-status:focus{outline:none}
+
+/* Give the cover introduction its own space below the masthead. */
+@media(min-width:1151px){
+ .cover-copy{top:calc(131px + 14.476vw + 28px);bottom:auto;max-width:27%;width:27%}
+ .cover-copy h2{font-size:clamp(32px,2.65vw,56px);line-height:1.12}
+ .cover-copy h2 em{white-space:normal}
+ .cover-copy .eyebrow{margin-bottom:14px}
+ .cover-description{margin-top:18px}
+ .cover-actions{margin-top:20px;flex-wrap:wrap;gap:12px 20px}
+ .hero-stage{min-height:max(780px,calc(480px + 24vw))}
+ .hero-sequence{min-height:max(780px,calc(480px + 24vw))}
+}
+@media(min-width:1700px){
+ .cover-copy{top:calc(15% + 14.476vw + 28px)}
+ .hero-stage{min-height:max(900px,47vw)}
+ .hero-sequence{min-height:max(900px,47vw)}
+}
+@media(min-width:701px) and (max-width:1150px){
+ .cover-copy{top:calc(131px + 14.476vw + 28px);bottom:auto;width:29%;max-width:29%}
+ .cover-copy h2{font-size:3.15vw;line-height:1.12}
+ .cover-copy h2 em{white-space:normal}
+ .cover-copy .eyebrow{font-size:6px;letter-spacing:.1em;margin-bottom:12px}
+ .cover-description{margin-top:18px}
+ .cover-actions{flex-direction:column;align-items:flex-start;gap:8px;margin-top:18px}
+ .surname{left:33%;font-size:6.8vw}
+ .cover-profession{top:calc(var(--surname-top,48%) + 7.48vw + 22px)}
+}
+@media(min-width:701px) and (max-width:900px){
+ .cover-copy{top:calc(145px + 14.476vw + 28px)}
+}
+/* Fill the narrow editorial frame with the portrait, without empty space above it. */
+@media(max-width:700px){
+ .hero-portrait img{object-fit:cover;object-position:50% 50%}
+ .spread-left{left:4%;top:48%;width:22%;height:29%}
+ .spread-right{left:74%;top:43%;width:22%;height:27%}
+ .spread-word{bottom:24%;font-size:11vw}
+ .spread-center-caption{top:83%;left:28%;width:44%;text-align:center}
+ .spread-script{top:22%;right:6%}
+ .cover-actions .button,.cover-actions .text-link{min-height:44px}
+ .filters button{min-height:44px}
+}
+/* A concise project guide, accessible without JavaScript. */
+.project-guide{padding:64px var(--gutter);background:var(--paper);color:var(--ink)}
+.project-guide-inner{max-width:1440px;margin:auto;display:grid;grid-template-columns:1fr 1.25fr;gap:8vw}
+.project-guide h2{font:400 clamp(36px,4vw,62px)/1.08 var(--serif);letter-spacing:-.04em;margin-top:18px}
+.project-guide details{border-bottom:1px solid #c7bbac;padding:20px 0}
+.project-guide summary{font-size:14px;line-height:1.6;cursor:pointer;padding-right:20px}
+.project-guide details p{font-size:13px;line-height:1.85;color:#65574b;margin-top:16px;max-width:60ch}
+.project-guide details a{text-decoration:underline;text-underline-offset:4px}
+.about-copy>.profile-intro{color:var(--ink);font-weight:600}
+@media(max-width:700px){.project-guide{padding:44px var(--gutter)}.project-guide-inner{display:block}.project-guide h2{font-size:38px;margin-bottom:24px}.project-guide summary{font-size:13px;min-height:44px}.project-guide details p{font-size:12px}}

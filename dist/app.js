@@ -93,7 +93,7 @@
     let end = [36,21,28,62];
     if (narrow.matches) {
       start = [0,24,100,65];
-      end = [33,30,34,48];
+      end = [28,32,44,49];
     }
     const portraitBox = start.map((value, index) => lerp(value, end[index], transform));
     ['left','top','width','height'].forEach((property, index) => {
@@ -365,7 +365,7 @@
     const data = new FormData(form);
     const fields = Object.fromEntries(['name','company','email','message','website'].map(key => [key, String(data.get(key) || '').trim()]));
     const { name, company, email, message } = fields;
-    const subject = `Collaboration — ${company || name}`;
+    const subject = `Demande de ${name}${company ? ` — ${company}` : ''}`;
     requestText = `Bonjour Talyana,\n\n${message}\n\nNom : ${name}\nSociété / Projet : ${company || 'Non précisé'}\nE-mail : ${email}`;
     const status = $('#form-status');
     const button = $('.submit-button');

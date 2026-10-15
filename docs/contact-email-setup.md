@@ -7,6 +7,10 @@ Expéditeur prévu : Talyana Rossignol <portfolio@contact.lorn-digital-studio.fr
 Domaine Resend : contact.lorn-digital-studio.fr
 Région : eu-west-1
 
+Objet : Demande de [nom du client] — [société / projet si renseigné]. Le nom du client figure aussi dans le corps du message.
+
+La vérification DNS a été lancée le 15 octobre 2026. Le dernier statut observé est pending. L’activation attend une validation effective.
+
 ## Entrées à ajouter dans la zone DNS lorn-digital-studio.fr
 
 Utiliser TTL automatique ou la valeur par défaut. Les noms ci-dessous sont relatifs à lorn-digital-studio.fr. Si l’interface demande des noms complets, ajouter .lorn-digital-studio.fr à la fin. Ajouter ces entrées sans supprimer les enregistrements existants du domaine principal.
