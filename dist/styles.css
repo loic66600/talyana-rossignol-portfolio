@@ -144,9 +144,9 @@ dialog{border:0;padding:0}dialog::backdrop{background:#0d0b0bf5;backdrop-filter:
 @media(min-width:701px) and (max-width:900px){
  .cover-copy{top:calc(145px + 14.476vw + 28px)}
 }
-/* Fill the narrow editorial frame with the portrait, without empty space above it. */
+/* Keep the head inside the narrow cover and editorial frames as their ratio changes. */
 @media(max-width:700px){
- .hero-portrait img{object-fit:cover;object-position:50% 50%}
+ .hero-portrait img{object-fit:cover;object-position:50% 0%}
  .spread-left{left:4%;top:48%;width:22%;height:29%}
  .spread-right{left:74%;top:43%;width:22%;height:27%}
  .spread-word{bottom:24%;font-size:11vw}
