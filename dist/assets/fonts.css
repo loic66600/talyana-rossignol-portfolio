@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(./bodoni-0.ttf) format('truetype');
+  src: url(./fonts/bodoni-0-504c9f5204.woff2) format('woff2');
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(./bodoni-italic-0.ttf) format('truetype');
+  src: url(./fonts/bodoni-italic-0-99145ba927.woff2) format('woff2');
 }
 
 @font-face {
@@ -19,19 +19,19 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(./manrope-0.ttf) format('truetype');
+  src: url(./fonts/manrope-0-bb8f8f2f68.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(./manrope-1.ttf) format('truetype');
+  src: url(./fonts/manrope-1-6e15df378d.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(./manrope-2.ttf) format('truetype');
+  src: url(./fonts/manrope-2-78a6a26acf.woff2) format('woff2');
 }

@@ -3,5 +3,29 @@
   "buildCommand": "",
   "installCommand": "",
   "outputDirectory": "dist",
-  "functions": { "api/contact.js": { "maxDuration": 20 } }
+  "functions": {
+    "api/contact.js": {
+      "maxDuration": 20
+    }
+  },
+  "headers": [
+    {
+      "source": "/assets/responsive/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
 }

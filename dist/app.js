@@ -215,6 +215,26 @@
 
   const filmTrack = $('#film-track');
   const filmVideos = $$('.film-screen video');
+  // A poster request is independent of preload="none". Wait until its film is near.
+  const loadFilmPoster = video => {
+    if (!video.dataset.poster) return;
+    const pixels = video.getBoundingClientRect().width * (window.devicePixelRatio || 1);
+    video.poster = pixels > 384 ? video.dataset.posterLarge : video.dataset.poster;
+    delete video.dataset.poster;
+    delete video.dataset.posterLarge;
+  };
+  if ('IntersectionObserver' in window) {
+    const posterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        loadFilmPoster(entry.target);
+        posterObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: '240px 0px' });
+    filmVideos.forEach(video => posterObserver.observe(video));
+  } else {
+    filmVideos.forEach(loadFilmPoster);
+  }
   if (filmTrack) {
     const filmNavigation = $('.film-navigation');
     const filmButtons = $$('[data-film-direction]');
@@ -266,7 +286,7 @@
     photoIndex = (index + activeGallery.length) % activeGallery.length;
     const item = activeGallery[photoIndex];
     const original = $('img', item);
-    $('#lightbox-image').src = original.getAttribute('src');
+    $('#lightbox-image').src = original.dataset.full || original.getAttribute('src');
     $('#lightbox-image').alt = original.alt;
     $('#lightbox-title').textContent = $('figcaption>span', item).textContent;
     $('#lightbox-count').textContent = `${String(photoIndex + 1).padStart(2, '0')} / ${String(activeGallery.length).padStart(2, '0')}`;

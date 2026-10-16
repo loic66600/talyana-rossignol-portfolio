@@ -1,0 +1,909 @@
+{
+  "images": {
+    "backstage-work": {
+      "original": "./assets/backstage-work.webp",
+      "originalBytes": 320602,
+      "width": 1012,
+      "height": 1800,
+      "avif": [
+        {
+          "src": "./assets/responsive/backstage-work-160-528b0a91f4.avif",
+          "width": 160,
+          "height": 285,
+          "bytes": 4710
+        },
+        {
+          "src": "./assets/responsive/backstage-work-320-9a1bc3da65.avif",
+          "width": 320,
+          "height": 569,
+          "bytes": 15990
+        },
+        {
+          "src": "./assets/responsive/backstage-work-480-b69b57408a.avif",
+          "width": 480,
+          "height": 854,
+          "bytes": 34376
+        },
+        {
+          "src": "./assets/responsive/backstage-work-960-9e92228040.avif",
+          "width": 960,
+          "height": 1708,
+          "bytes": 113529
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/backstage-work-240-bfd42c1c43.webp",
+          "width": 240,
+          "height": 427,
+          "bytes": 14842
+        },
+        {
+          "src": "./assets/responsive/backstage-work-480-a1d8cb8585.webp",
+          "width": 480,
+          "height": 854,
+          "bytes": 53932
+        },
+        {
+          "src": "./assets/responsive/backstage-work-960-ddba15edb4.webp",
+          "width": 960,
+          "height": 1708,
+          "bytes": 174654
+        }
+      ]
+    },
+    "backstage": {
+      "original": "./assets/backstage.webp",
+      "originalBytes": 316238,
+      "width": 1012,
+      "height": 1800,
+      "avif": [
+        {
+          "src": "./assets/responsive/backstage-160-f770fc804f.avif",
+          "width": 160,
+          "height": 285,
+          "bytes": 5125
+        },
+        {
+          "src": "./assets/responsive/backstage-320-ace8c44cc0.avif",
+          "width": 320,
+          "height": 569,
+          "bytes": 16772
+        },
+        {
+          "src": "./assets/responsive/backstage-480-79097f187c.avif",
+          "width": 480,
+          "height": 854,
+          "bytes": 34890
+        },
+        {
+          "src": "./assets/responsive/backstage-960-d4f19e8c9f.avif",
+          "width": 960,
+          "height": 1708,
+          "bytes": 108493
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/backstage-240-cbec75f234.webp",
+          "width": 240,
+          "height": 427,
+          "bytes": 16068
+        },
+        {
+          "src": "./assets/responsive/backstage-480-b67067ff6a.webp",
+          "width": 480,
+          "height": 854,
+          "bytes": 55050
+        },
+        {
+          "src": "./assets/responsive/backstage-960-34064d8941.webp",
+          "width": 960,
+          "height": 1708,
+          "bytes": 163576
+        }
+      ]
+    },
+    "collaboration": {
+      "original": "./assets/collaboration.webp",
+      "originalBytes": 53738,
+      "width": 934,
+      "height": 1277,
+      "avif": [
+        {
+          "src": "./assets/responsive/collaboration-160-dff51de35e.avif",
+          "width": 160,
+          "height": 219,
+          "bytes": 3005
+        },
+        {
+          "src": "./assets/responsive/collaboration-320-3507f5d5d1.avif",
+          "width": 320,
+          "height": 438,
+          "bytes": 7100
+        },
+        {
+          "src": "./assets/responsive/collaboration-480-f6a5094087.avif",
+          "width": 480,
+          "height": 656,
+          "bytes": 12016
+        },
+        {
+          "src": "./assets/responsive/collaboration-934-ef9ae7e0b8.avif",
+          "width": 934,
+          "height": 1277,
+          "bytes": 26617
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/collaboration-240-2e73f9d474.webp",
+          "width": 240,
+          "height": 328,
+          "bytes": 6530
+        },
+        {
+          "src": "./assets/responsive/collaboration-480-a23292c75b.webp",
+          "width": 480,
+          "height": 656,
+          "bytes": 14546
+        },
+        {
+          "src": "./assets/responsive/collaboration-934-6c7a379243.webp",
+          "width": 934,
+          "height": 1277,
+          "bytes": 28844
+        }
+      ]
+    },
+    "couture": {
+      "original": "./assets/couture.webp",
+      "originalBytes": 191664,
+      "width": 1079,
+      "height": 1722,
+      "avif": [
+        {
+          "src": "./assets/responsive/couture-160-3a3768a6b2.avif",
+          "width": 160,
+          "height": 255,
+          "bytes": 4736
+        },
+        {
+          "src": "./assets/responsive/couture-320-ebcc3cf056.avif",
+          "width": 320,
+          "height": 511,
+          "bytes": 13412
+        },
+        {
+          "src": "./assets/responsive/couture-480-f206b700bf.avif",
+          "width": 480,
+          "height": 766,
+          "bytes": 24752
+        },
+        {
+          "src": "./assets/responsive/couture-960-845cf8f70b.avif",
+          "width": 960,
+          "height": 1532,
+          "bytes": 65301
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/couture-240-4aac0c6a68.webp",
+          "width": 240,
+          "height": 383,
+          "bytes": 13900
+        },
+        {
+          "src": "./assets/responsive/couture-480-4bc60e8e12.webp",
+          "width": 480,
+          "height": 766,
+          "bytes": 37598
+        },
+        {
+          "src": "./assets/responsive/couture-960-019e5249d2.webp",
+          "width": 960,
+          "height": 1532,
+          "bytes": 88048
+        }
+      ]
+    },
+    "craft": {
+      "original": "./assets/craft.webp",
+      "originalBytes": 82170,
+      "width": 1080,
+      "height": 1603,
+      "avif": [
+        {
+          "src": "./assets/responsive/craft-160-755f7cfa8f.avif",
+          "width": 160,
+          "height": 237,
+          "bytes": 3041
+        },
+        {
+          "src": "./assets/responsive/craft-320-1bb72757ed.avif",
+          "width": 320,
+          "height": 475,
+          "bytes": 8042
+        },
+        {
+          "src": "./assets/responsive/craft-480-12392c382b.avif",
+          "width": 480,
+          "height": 712,
+          "bytes": 13928
+        },
+        {
+          "src": "./assets/responsive/craft-960-5f07e1e1cb.avif",
+          "width": 960,
+          "height": 1425,
+          "bytes": 34432
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/craft-240-e0d12e10da.webp",
+          "width": 240,
+          "height": 356,
+          "bytes": 6226
+        },
+        {
+          "src": "./assets/responsive/craft-480-3ead3cc2cc.webp",
+          "width": 480,
+          "height": 712,
+          "bytes": 15312
+        },
+        {
+          "src": "./assets/responsive/craft-960-371065ef80.webp",
+          "width": 960,
+          "height": 1425,
+          "bytes": 36360
+        }
+      ]
+    },
+    "encounter": {
+      "original": "./assets/encounter.webp",
+      "originalBytes": 143728,
+      "width": 1080,
+      "height": 1719,
+      "avif": [
+        {
+          "src": "./assets/responsive/encounter-160-55a758c6b5.avif",
+          "width": 160,
+          "height": 255,
+          "bytes": 2998
+        },
+        {
+          "src": "./assets/responsive/encounter-320-bc47a2fcb3.avif",
+          "width": 320,
+          "height": 509,
+          "bytes": 7883
+        },
+        {
+          "src": "./assets/responsive/encounter-480-7383dc8e17.avif",
+          "width": 480,
+          "height": 764,
+          "bytes": 14811
+        },
+        {
+          "src": "./assets/responsive/encounter-960-a8ff9cde31.avif",
+          "width": 960,
+          "height": 1528,
+          "bytes": 43659
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/encounter-240-0dc1bc4d5e.webp",
+          "width": 240,
+          "height": 382,
+          "bytes": 6752
+        },
+        {
+          "src": "./assets/responsive/encounter-480-65ea6f08d1.webp",
+          "width": 480,
+          "height": 764,
+          "bytes": 18394
+        },
+        {
+          "src": "./assets/responsive/encounter-960-2c89327d5e.webp",
+          "width": 960,
+          "height": 1528,
+          "bytes": 47822
+        }
+      ]
+    },
+    "event": {
+      "original": "./assets/event.webp",
+      "originalBytes": 111276,
+      "width": 1079,
+      "height": 1447,
+      "avif": [
+        {
+          "src": "./assets/responsive/event-160-f5bd7656b9.avif",
+          "width": 160,
+          "height": 215,
+          "bytes": 3776
+        },
+        {
+          "src": "./assets/responsive/event-320-6e6eb9c785.avif",
+          "width": 320,
+          "height": 429,
+          "bytes": 9642
+        },
+        {
+          "src": "./assets/responsive/event-480-94464559c7.avif",
+          "width": 480,
+          "height": 644,
+          "bytes": 17167
+        },
+        {
+          "src": "./assets/responsive/event-960-4366decb68.avif",
+          "width": 960,
+          "height": 1287,
+          "bytes": 42126
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/event-240-b737e5694b.webp",
+          "width": 240,
+          "height": 322,
+          "bytes": 9336
+        },
+        {
+          "src": "./assets/responsive/event-480-830697cf69.webp",
+          "width": 480,
+          "height": 644,
+          "bytes": 22832
+        },
+        {
+          "src": "./assets/responsive/event-960-d542d7452d.webp",
+          "width": 960,
+          "height": 1287,
+          "bytes": 50542
+        }
+      ]
+    },
+    "mirror": {
+      "original": "./assets/mirror.webp",
+      "originalBytes": 205558,
+      "width": 1012,
+      "height": 1800,
+      "avif": [
+        {
+          "src": "./assets/responsive/mirror-160-0bc9e83f79.avif",
+          "width": 160,
+          "height": 285,
+          "bytes": 5416
+        },
+        {
+          "src": "./assets/responsive/mirror-320-9814063978.avif",
+          "width": 320,
+          "height": 569,
+          "bytes": 15758
+        },
+        {
+          "src": "./assets/responsive/mirror-480-4dcd7c568f.avif",
+          "width": 480,
+          "height": 854,
+          "bytes": 28675
+        },
+        {
+          "src": "./assets/responsive/mirror-960-56b80c6941.avif",
+          "width": 960,
+          "height": 1708,
+          "bytes": 74790
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/mirror-240-ecb95b555e.webp",
+          "width": 240,
+          "height": 427,
+          "bytes": 16022
+        },
+        {
+          "src": "./assets/responsive/mirror-480-16f03e8b21.webp",
+          "width": 480,
+          "height": 854,
+          "bytes": 41476
+        },
+        {
+          "src": "./assets/responsive/mirror-960-5f89f13b7a.webp",
+          "width": 960,
+          "height": 1708,
+          "bytes": 100498
+        }
+      ]
+    },
+    "natural": {
+      "original": "./assets/natural.webp",
+      "originalBytes": 190250,
+      "width": 1080,
+      "height": 1614,
+      "avif": [
+        {
+          "src": "./assets/responsive/natural-160-a9336d07f6.avif",
+          "width": 160,
+          "height": 239,
+          "bytes": 5071
+        },
+        {
+          "src": "./assets/responsive/natural-320-91aea052ff.avif",
+          "width": 320,
+          "height": 478,
+          "bytes": 15471
+        },
+        {
+          "src": "./assets/responsive/natural-480-fdb8dd6542.avif",
+          "width": 480,
+          "height": 717,
+          "bytes": 28265
+        },
+        {
+          "src": "./assets/responsive/natural-960-706c3c7262.avif",
+          "width": 960,
+          "height": 1435,
+          "bytes": 65511
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/natural-240-0fa3f3f112.webp",
+          "width": 240,
+          "height": 359,
+          "bytes": 17018
+        },
+        {
+          "src": "./assets/responsive/natural-480-ff0009c764.webp",
+          "width": 480,
+          "height": 717,
+          "bytes": 44494
+        },
+        {
+          "src": "./assets/responsive/natural-960-715b876315.webp",
+          "width": 960,
+          "height": 1435,
+          "bytes": 95292
+        }
+      ]
+    },
+    "portrait": {
+      "original": "./assets/portrait.webp",
+      "originalBytes": 70724,
+      "width": 1122,
+      "height": 1402,
+      "avif": [
+        {
+          "src": "./assets/responsive/portrait-320-a427f849ca.avif",
+          "width": 320,
+          "height": 400,
+          "bytes": 7459
+        },
+        {
+          "src": "./assets/responsive/portrait-640-321ba96a0f.avif",
+          "width": 640,
+          "height": 800,
+          "bytes": 15954
+        },
+        {
+          "src": "./assets/responsive/portrait-960-e06e5f2516.avif",
+          "width": 960,
+          "height": 1200,
+          "bytes": 27583
+        },
+        {
+          "src": "./assets/responsive/portrait-1122-209e19a2e3.avif",
+          "width": 1122,
+          "height": 1402,
+          "bytes": 30701
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/portrait-320-8e68c4f443.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 11806
+        },
+        {
+          "src": "./assets/responsive/portrait-640-6b0d545e5b.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 28786
+        },
+        {
+          "src": "./assets/responsive/portrait-960-f0096c68cc.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 49648
+        },
+        {
+          "src": "./assets/responsive/portrait-1122-9733b4a3a7.webp",
+          "width": 1122,
+          "height": 1402,
+          "bytes": 52704
+        }
+      ]
+    },
+    "preparation": {
+      "original": "./assets/preparation.webp",
+      "originalBytes": 106108,
+      "width": 1079,
+      "height": 1399,
+      "avif": [
+        {
+          "src": "./assets/responsive/preparation-160-feacdc532e.avif",
+          "width": 160,
+          "height": 207,
+          "bytes": 3360
+        },
+        {
+          "src": "./assets/responsive/preparation-320-2ea04b00e3.avif",
+          "width": 320,
+          "height": 415,
+          "bytes": 9382
+        },
+        {
+          "src": "./assets/responsive/preparation-480-743e9d6a37.avif",
+          "width": 480,
+          "height": 622,
+          "bytes": 16623
+        },
+        {
+          "src": "./assets/responsive/preparation-960-c0fa90fe3e.avif",
+          "width": 960,
+          "height": 1245,
+          "bytes": 40315
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/preparation-240-a76e82d544.webp",
+          "width": 240,
+          "height": 311,
+          "bytes": 8732
+        },
+        {
+          "src": "./assets/responsive/preparation-480-bf1614e3f4.webp",
+          "width": 480,
+          "height": 622,
+          "bytes": 21186
+        },
+        {
+          "src": "./assets/responsive/preparation-960-60784ec965.webp",
+          "width": 960,
+          "height": 1245,
+          "bytes": 47218
+        }
+      ]
+    },
+    "runway": {
+      "original": "./assets/runway.webp",
+      "originalBytes": 170606,
+      "width": 1080,
+      "height": 1665,
+      "avif": [
+        {
+          "src": "./assets/responsive/runway-160-50349b5667.avif",
+          "width": 160,
+          "height": 247,
+          "bytes": 4423
+        },
+        {
+          "src": "./assets/responsive/runway-320-45a854519c.avif",
+          "width": 320,
+          "height": 493,
+          "bytes": 12272
+        },
+        {
+          "src": "./assets/responsive/runway-480-90f317e2f9.avif",
+          "width": 480,
+          "height": 740,
+          "bytes": 23612
+        },
+        {
+          "src": "./assets/responsive/runway-960-26c9d0b69f.avif",
+          "width": 960,
+          "height": 1480,
+          "bytes": 64179
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/runway-240-dd5acdede5.webp",
+          "width": 240,
+          "height": 370,
+          "bytes": 12064
+        },
+        {
+          "src": "./assets/responsive/runway-480-34e636bbb8.webp",
+          "width": 480,
+          "height": 740,
+          "bytes": 34210
+        },
+        {
+          "src": "./assets/responsive/runway-960-2877b8b258.webp",
+          "width": 960,
+          "height": 1480,
+          "bytes": 81854
+        }
+      ]
+    },
+    "show": {
+      "original": "./assets/show.webp",
+      "originalBytes": 196980,
+      "width": 1080,
+      "height": 1401,
+      "avif": [
+        {
+          "src": "./assets/responsive/show-160-82263921ff.avif",
+          "width": 160,
+          "height": 208,
+          "bytes": 4487
+        },
+        {
+          "src": "./assets/responsive/show-320-8484f25650.avif",
+          "width": 320,
+          "height": 415,
+          "bytes": 13304
+        },
+        {
+          "src": "./assets/responsive/show-480-32104909de.avif",
+          "width": 480,
+          "height": 623,
+          "bytes": 25443
+        },
+        {
+          "src": "./assets/responsive/show-960-d5eb71044d.avif",
+          "width": 960,
+          "height": 1245,
+          "bytes": 68597
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/show-240-3002e8b035.webp",
+          "width": 240,
+          "height": 311,
+          "bytes": 13158
+        },
+        {
+          "src": "./assets/responsive/show-480-26446b815a.webp",
+          "width": 480,
+          "height": 623,
+          "bytes": 37410
+        },
+        {
+          "src": "./assets/responsive/show-960-99bd088a42.webp",
+          "width": 960,
+          "height": 1245,
+          "bytes": 89762
+        }
+      ]
+    },
+    "studio-hair": {
+      "original": "./assets/studio-hair.webp",
+      "originalBytes": 191472,
+      "width": 1350,
+      "height": 1800,
+      "avif": [
+        {
+          "src": "./assets/responsive/studio-hair-160-672cb106a9.avif",
+          "width": 160,
+          "height": 213,
+          "bytes": 3607
+        },
+        {
+          "src": "./assets/responsive/studio-hair-320-353e27913b.avif",
+          "width": 320,
+          "height": 427,
+          "bytes": 9901
+        },
+        {
+          "src": "./assets/responsive/studio-hair-480-de56bdfdcd.avif",
+          "width": 480,
+          "height": 640,
+          "bytes": 18224
+        },
+        {
+          "src": "./assets/responsive/studio-hair-960-a48f1b23a3.avif",
+          "width": 960,
+          "height": 1280,
+          "bytes": 51532
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/studio-hair-240-d462a6053b.webp",
+          "width": 240,
+          "height": 320,
+          "bytes": 9576
+        },
+        {
+          "src": "./assets/responsive/studio-hair-480-d3fa075ba6.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 25092
+        },
+        {
+          "src": "./assets/responsive/studio-hair-960-f266007ab8.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 64078
+        }
+      ]
+    },
+    "studio-shoot": {
+      "original": "./assets/studio-shoot.webp",
+      "originalBytes": 78826,
+      "width": 1012,
+      "height": 1800,
+      "avif": [
+        {
+          "src": "./assets/responsive/studio-shoot-160-855ff61367.avif",
+          "width": 160,
+          "height": 285,
+          "bytes": 3353
+        },
+        {
+          "src": "./assets/responsive/studio-shoot-320-8aa8dee8e9.avif",
+          "width": 320,
+          "height": 569,
+          "bytes": 8605
+        },
+        {
+          "src": "./assets/responsive/studio-shoot-480-2620a9660e.avif",
+          "width": 480,
+          "height": 854,
+          "bytes": 15240
+        },
+        {
+          "src": "./assets/responsive/studio-shoot-960-00846edec8.avif",
+          "width": 960,
+          "height": 1708,
+          "bytes": 36428
+        }
+      ],
+      "webp": [
+        {
+          "src": "./assets/responsive/studio-shoot-240-5e2e5b427a.webp",
+          "width": 240,
+          "height": 427,
+          "bytes": 7778
+        },
+        {
+          "src": "./assets/responsive/studio-shoot-480-249ffd817c.webp",
+          "width": 480,
+          "height": 854,
+          "bytes": 17944
+        },
+        {
+          "src": "./assets/responsive/studio-shoot-960-e6d932e089.webp",
+          "width": 960,
+          "height": 1708,
+          "bytes": 39884
+        }
+      ]
+    }
+  },
+  "posters": {
+    "backstage-to-runway": {
+      "originalBytes": 28540,
+      "variants": [
+        {
+          "src": "./assets/responsive/film-backstage-to-runway-384-edad02c1f7.webp",
+          "width": 384,
+          "height": 683,
+          "bytes": 13522
+        },
+        {
+          "src": "./assets/responsive/film-backstage-to-runway-576-174dc0ee63.webp",
+          "width": 576,
+          "height": 1024,
+          "bytes": 19938
+        }
+      ]
+    },
+    "finishing-touches": {
+      "originalBytes": 41488,
+      "variants": [
+        {
+          "src": "./assets/responsive/film-finishing-touches-384-2d1564a325.webp",
+          "width": 384,
+          "height": 683,
+          "bytes": 16648
+        },
+        {
+          "src": "./assets/responsive/film-finishing-touches-576-0ed44e52d3.webp",
+          "width": 576,
+          "height": 1024,
+          "bytes": 25952
+        }
+      ]
+    },
+    "hair-in-motion": {
+      "originalBytes": 26994,
+      "variants": [
+        {
+          "src": "./assets/responsive/film-hair-in-motion-384-e68b619972.webp",
+          "width": 384,
+          "height": 683,
+          "bytes": 12720
+        },
+        {
+          "src": "./assets/responsive/film-hair-in-motion-576-4645d8f496.webp",
+          "width": 576,
+          "height": 1024,
+          "bytes": 19182
+        }
+      ]
+    },
+    "runway-finale": {
+      "originalBytes": 30162,
+      "variants": [
+        {
+          "src": "./assets/responsive/film-runway-finale-384-e368034650.webp",
+          "width": 384,
+          "height": 683,
+          "bytes": 14888
+        },
+        {
+          "src": "./assets/responsive/film-runway-finale-576-d99096bd98.webp",
+          "width": 576,
+          "height": 1024,
+          "bytes": 20576
+        }
+      ]
+    },
+    "runway-moment": {
+      "originalBytes": 22036,
+      "variants": [
+        {
+          "src": "./assets/responsive/film-runway-moment-384-ecef82fd23.webp",
+          "width": 384,
+          "height": 683,
+          "bytes": 9512
+        },
+        {
+          "src": "./assets/responsive/film-runway-moment-576-661d000a5e.webp",
+          "width": 576,
+          "height": 1024,
+          "bytes": 15050
+        }
+      ]
+    }
+  },
+  "fonts": {
+    "bebas-neue": {
+      "src": "./assets/fonts/bebas-neue-a6a541c6f1.woff2",
+      "bytes": 14672,
+      "originalBytes": 56136
+    },
+    "bodoni-0": {
+      "src": "./assets/fonts/bodoni-0-504c9f5204.woff2",
+      "bytes": 15720,
+      "originalBytes": 44752
+    },
+    "bodoni-italic-0": {
+      "src": "./assets/fonts/bodoni-italic-0-99145ba927.woff2",
+      "bytes": 17864,
+      "originalBytes": 47556
+    },
+    "manrope-0": {
+      "src": "./assets/fonts/manrope-0-bb8f8f2f68.woff2",
+      "bytes": 18360,
+      "originalBytes": 94972
+    },
+    "manrope-1": {
+      "src": "./assets/fonts/manrope-1-6e15df378d.woff2",
+      "bytes": 18152,
+      "originalBytes": 95060
+    },
+    "manrope-2": {
+      "src": "./assets/fonts/manrope-2-78a6a26acf.woff2",
+      "bytes": 18324,
+      "originalBytes": 95096
+    }
+  }
+}
