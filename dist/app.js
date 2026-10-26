@@ -5,6 +5,7 @@
   const body = document.body;
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const narrow = window.matchMedia('(max-width: 700px)');
+  const shortScreen = window.matchMedia('(max-height: 540px)');
   const hover = window.matchMedia('(hover: hover) and (pointer: fine)');
   const navigation = $('#navigation');
   const sequence = $('.hero-sequence');
@@ -74,7 +75,7 @@
   function updateHero() {
     const y = window.scrollY;
     const backstageBounds = backstageArt?.getBoundingClientRect();
-    progress = motionPreference.matches ? 0 : clamp((y - sequenceTop) / sequenceDistance);
+    progress = motionPreference.matches || shortScreen.matches ? 0 : clamp((y - sequenceTop) / sequenceDistance);
     const transform = smooth(.06, .87, progress);
     const coverOpacity = 1 - smooth(.08, .42, progress);
     const spreadOpacity = smooth(.30, .76, progress);
