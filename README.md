@@ -10,7 +10,7 @@ Les photos WebP sont issues des pièces jointes de l’utilisateur. Les référe
 
 ## Fonctionnement
 
-Le site reste statique et sans compilation. Le formulaire utilise une fonction Vercel dans `api/contact.js` et Resend lorsque le domaine d’expédition est vérifié et `CONTACT_FORM_ENABLED=true`. Un envoi manuel par messagerie et une copie du texte restent disponibles en cas d’indisponibilité. Les étapes d’activation et les DNS sont documentés dans `docs/contact-email-setup.md`. La préférence de réduction des animations désactive le header épinglé et les effets de mouvement.
+Le site reste statique et sans compilation. Le formulaire envoie directement à Web3Forms depuis le navigateur. Un envoi manuel par messagerie et une copie du texte restent disponibles en cas d’erreur. Voir `docs/contact-email-setup.md`. La préférence de réduction des animations désactive le header épinglé et les effets de mouvement.
 
 ## Publication
 
@@ -22,4 +22,4 @@ La galerie contient 14 photos, dont les nouvelles prises de vue `studio-shoot.we
 
 ## Déploiement Vercel
 
-Déployer la racine du dépôt avec `vercel.json` : les fichiers publics sont dans `dist/` et la fonction dans `api/`. La copie Vercel des métadonnées HTML utilise son domaine public. Le dossier `api/` ne fait pas partie de la publication statique Sites ; son formulaire appelle le même endpoint Vercel avec une liste CORS limitée.
+Déployer la racine du dépôt avec `vercel.json` : les fichiers publics sont dans `dist/`. Le formulaire fonctionne directement sur Sites et Vercel avec Web3Forms. L’ancienne fonction `api/contact.js` est conservée comme code historique, mais n’est plus appelée par le formulaire.

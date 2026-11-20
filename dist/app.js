@@ -331,7 +331,7 @@
     },
     privacy: {
       title: 'Confidentialité',
-      content: '<h3>Votre demande de contact</h3><p>Votre nom, votre adresse e-mail, votre société ou projet et votre message servent à répondre à votre demande. Lorsque l’envoi direct est disponible, ces informations transitent par Vercel et le prestataire e-mail Resend, puis sont adressées à la messagerie de Talyana. Le formulaire ne crée aucun abonnement à une newsletter.</p><p>En cas d’indisponibilité, vous pouvez utiliser votre messagerie ou copier votre demande. L’envoi reste alors à confirmer dans votre application de messagerie. Des informations techniques peuvent être traitées pour limiter les abus. Les messages et les journaux d’envoi peuvent être conservés par les prestataires selon leurs conditions.</p><h3>Navigation</h3><p>Le code de ce portfolio n’ajoute ni outil publicitaire ni mesure d’audience. Les photographies et les polices sont hébergées avec le site. La plateforme d’hébergement peut traiter les données techniques nécessaires à l’accès et au fonctionnement du site, selon ses propres conditions.</p><h3>Liens externes</h3><p>Le lien Facebook ouvre un service externe disposant de sa propre politique de confidentialité.</p><h3>Nous contacter</h3><p>Pour une question concernant vos échanges par e-mail : <a href="mailto:rossignoltalyana12@gmail.com">rossignoltalyana12@gmail.com</a>.</p>'
+      content: '<h3>Votre demande de contact</h3><p>Votre nom, votre adresse e-mail, votre société ou projet et votre message servent à répondre à votre demande. Ces informations sont transmises au service Web3Forms pour acheminer votre demande vers l’adresse associée au formulaire de Talyana. Le formulaire ne crée aucun abonnement à une newsletter.</p><p>En cas d’indisponibilité, vous pouvez utiliser votre messagerie ou copier votre demande. L’envoi reste alors à confirmer dans votre application de messagerie. Des informations techniques peuvent être traitées pour limiter les abus. Les messages et les journaux d’envoi peuvent être conservés par les prestataires selon leurs conditions.</p><h3>Navigation</h3><p>Le code de ce portfolio n’ajoute ni outil publicitaire ni mesure d’audience. Les photographies et les polices sont hébergées avec le site. La plateforme d’hébergement peut traiter les données techniques nécessaires à l’accès et au fonctionnement du site, selon ses propres conditions.</p><h3>Liens externes</h3><p>Le lien Facebook ouvre un service externe disposant de sa propre politique de confidentialité.</p><h3>Nous contacter</h3><p>Pour une question concernant vos échanges par e-mail : <a href="mailto:rossignoltalyana12@gmail.com">rossignoltalyana12@gmail.com</a>.</p>'
     }
   };
   $$('[data-dialog]').forEach(button => button.addEventListener('click', () => {
@@ -354,25 +354,8 @@
     previousFocus?.focus({ preventScroll: true });
   }));
 
-  const contactEndpoint = 'https://talyana-rossignol-portfolio.vercel.app/api/contact';
-  let contactToken = null;
-  let tokenRequest = null;
+  const contactEndpoint = 'https://api.web3forms.com/submit';
   let sendingContact = false;
-  async function prepareContact(force = false) {
-    if (force) { contactToken = null; tokenRequest = null; }
-    if (contactToken) return contactToken;
-    if (!tokenRequest) {
-      tokenRequest = fetch(contactEndpoint, { cache: 'no-store', signal: AbortSignal.timeout(10000) })
-        .then(async response => {
-          const data = await response.json();
-          if (!response.ok || !data.available) return null;
-          contactToken = data.token;
-          return contactToken;
-        }).catch(() => null).finally(() => { tokenRequest = null; });
-    }
-    return tokenRequest;
-  }
-  $('#contact-form').addEventListener('focusin', () => { prepareContact(); }, { once: true });
   function showManualContact(subject) {
     $('.copy-request').hidden = false;
     const fallback = $('#contact-mailto');
@@ -384,7 +367,8 @@
     const form = event.currentTarget;
     if (sendingContact || !form.reportValidity()) return;
     const data = new FormData(form);
-    const fields = Object.fromEntries(['name','company','email','message','website'].map(key => [key, String(data.get(key) || '').trim()]));
+    const fields = Object.fromEntries(['name','company','email','message'].map(key => [key, String(data.get(key) || '').trim()]));
+    if (data.get('botcheck')) return;
     const { name, company, email, message } = fields;
     const subject = `Demande de ${name}${company ? ` — ${company}` : ''}`;
     requestText = `Bonjour Talyana,\n\n${message}\n\nNom : ${name}\nSociété / Projet : ${company || 'Non précisé'}\nE-mail : ${email}`;
@@ -399,23 +383,28 @@
     $('#contact-mailto').hidden = true;
     $('.copy-request').hidden = true;
     try {
-      const token = await prepareContact();
-      if (!token) throw new Error('L’envoi direct est momentanément indisponible. Votre texte est conservé : utilisez le lien « Envoyer par ma messagerie » ci-dessous.');
       const response = await fetch(contactEndpoint, {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...fields, token }), signal: AbortSignal.timeout(18000)
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          ...fields,
+          access_key: data.get('access_key'),
+          subject,
+          from_name: 'Portfolio Talyana Rossignol',
+          botcheck: false
+        }),
+        signal: AbortSignal.timeout(18000)
       });
       const result = await response.json().catch(() => ({}));
-      if (!response.ok || result.ok !== true) {
-        if (result.code === 'expired') await prepareContact(true);
-        throw new Error(result.error || 'L’envoi n’a pas pu être confirmé. Réessayez ou utilisez votre messagerie.');
+      if (!response.ok || result.success !== true) {
+        throw new Error(response.status === 429
+          ? 'Trop de tentatives rapprochées. Votre texte est conservé : patientez ou utilisez votre messagerie.'
+          : 'L’envoi n’a pas pu être confirmé. Votre texte est conservé : réessayez ou utilisez votre messagerie.');
       }
       status.textContent = 'Votre demande a bien été envoyée à Talyana. Merci !';
       form.reset();
       $('#copy-fallback')?.remove();
       requestText = '';
-      contactToken = null;
-      tokenRequest = null;
       status.focus();
     } catch (error) {
       status.textContent = error.name === 'TimeoutError' || error.name === 'TypeError'

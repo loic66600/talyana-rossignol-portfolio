@@ -2,5 +2,7 @@
   "name": "talyana-rossignol-portfolio",
   "private": true,
   "type": "module",
-  "scripts": { "test": "node --test tests/contact.test.js" }
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
 }
