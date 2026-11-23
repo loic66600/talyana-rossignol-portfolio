@@ -5,6 +5,9 @@
   const body = document.body;
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const narrow = window.matchMedia('(max-width: 700px)');
+  const compactPortrait = window.matchMedia('(max-width: 480px) and (orientation: portrait)');
+  const instagramBrowser = /\bInstagram\b/i.test(navigator.userAgent);
+  document.documentElement.classList.toggle('instagram-browser', instagramBrowser);
   const shortScreen = window.matchMedia('(max-height: 540px)');
   const hover = window.matchMedia('(hover: hover) and (pointer: fine)');
   const navigation = $('#navigation');
@@ -75,7 +78,7 @@
   function updateHero() {
     const y = window.scrollY;
     const backstageBounds = backstageArt?.getBoundingClientRect();
-    progress = motionPreference.matches || shortScreen.matches ? 0 : clamp((y - sequenceTop) / sequenceDistance);
+    progress = motionPreference.matches || shortScreen.matches || sequenceDistance <= 1 ? 0 : clamp((y - sequenceTop) / sequenceDistance);
     const transform = smooth(.06, .87, progress);
     const coverOpacity = 1 - smooth(.08, .42, progress);
     const spreadOpacity = smooth(.30, .76, progress);
@@ -93,7 +96,7 @@
     let start = width > 1150 ? [20,6,60,102] : width > 900 ? [17,7,66,99] : [15,10,70,94];
     let end = [36,21,28,62];
     if (narrow.matches) {
-      start = [0,24,100,65];
+      start = instagramBrowser && compactPortrait.matches ? [21,30,84,64] : [0,24,100,65];
       end = [28,32,44,49];
     }
     const portraitBox = start.map((value, index) => lerp(value, end[index], transform));
